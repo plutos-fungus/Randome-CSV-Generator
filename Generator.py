@@ -4,33 +4,31 @@ from random import *
 import sys
 
 file = "hej" + ".csv"
-Roww = 0
-Coll = 0
+Row = 0
+Col = 0
 RandomRangeOne = 0
 RandomeRangeTwo = 0
-Numbe = 0
-inp = ""
 
-def Numbers():
+def Generate():
+    print("Hello, first of, thanks for using this software. Second, you should be aware that")
+    print(" even though this software is really light weight and simple, it is able to really")
+    print("mess up your system if you don't have much space left.")
+    print("I did some tests. And the results show that this tool is capable of generating files")
+    print("that use multible gigabytes in few minuts.")
     print("How big should the range of the numbers be? (From x to y)")
     print("x")
     RandomRangeOne = int(input())
     print("y")
     RandomRangeTwo = int(input())
-    Numbe = randrange(RandomRangeOne,RandomRangeTwo)
 
-def RowCol():
-    print("How many coloums do you want? ")
-    Coll = int(input())
     print("How many rows do you want?")
-    Roww = int(input())
-    for i in range(Coll):
-        for i in range(Roww):
-            print(Numbe, end="")
+    Row = int(input())
+    print("How many coloums do you want? ")
+    Col = int(input())
+
+    for i in range(Col):
+        for i in range(Row):
+            print(randrange(RandomRangeOne, RandomRangeTwo), end=",")
         print()
 
-def DoTheCool():
-    print("What you want? ")
-    Numbers()
-    RowCol()
-DoTheCool()
+Generate()
