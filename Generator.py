@@ -28,7 +28,8 @@ def Generate():
 
     for i in range(Col):
         for i in range(Row):
-            print(randrange(RandomRangeOne, RandomRangeTwo), end=",")
+            with open('test.csv', 'w') as f:
+                print(randrange(RandomRangeOne, RandomRangeTwo), end=",")
         print()
 
 Generate()
